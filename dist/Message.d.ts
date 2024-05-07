@@ -32,7 +32,7 @@ export declare abstract class Message implements MessageInterface {
     addTitle: (title: string) => this;
     addField: (field: FieldInterface) => this;
     buildPayload: () => any;
-    sendMessage: () => Promise<void>;
+    sendMessage: () => Promise<import("axios").AxiosResponse<any, any>>;
 }
 export {};
 //# sourceMappingURL=Message.d.ts.map
