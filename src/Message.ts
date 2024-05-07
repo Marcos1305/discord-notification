@@ -117,10 +117,8 @@ export abstract class Message implements MessageInterface {
   };
 
   sendMessage = async () => {
-    try {
+   
       axios.post(this.webhook, this.buildPayload());
-    } catch (error) {
-      // TODO: handle error
-    }
+   
   };
 }
