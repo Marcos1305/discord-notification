@@ -116,9 +116,7 @@ export abstract class Message implements MessageInterface {
     return JSON.parse(JSON.stringify(payload));
   };
 
-  sendMessage = async () => {
-   
-      axios.post(this.webhook, this.buildPayload());
-   
+  sendMessage = () => {
+    return axios.post(this.webhook, this.buildPayload());
   };
 }
